@@ -11,8 +11,8 @@
     "backbone.io": "0.3.3",
     "mongoose": "3.5.4",
     "socket.io": "0.9.13"
-  }
-  "engines" {  
+  },
+  "engines": {  
     "npm": "1.1.41",  
     "node": "1.2.10"  
   }  
