@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  	<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script src="javascripts/vendor/underscore-min.js"></script>
+    <script src="javascripts/vendor/backbone-min.js"></script>
+    <script type="text/javascript" src="javascripts/chat.js"></script>
+    <script type="text/javascript" src="javascripts/vendor/ejs.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/socket.io/backbone.io.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <textarea id="formMessage" class="form_message"></textarea>
+    <button id="sendMessasge" class="send_message"><span class="icon">&#9998;</span></button>
+    <button id="deleteAll" class="delete_all"><span class="icon">&#59177;</span></button>
+    <ul id="messageList" class="message_list"></ul>
+  </body>
+</html>
