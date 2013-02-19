@@ -1,6 +1,6 @@
 {
   "name": "application-name",
-  "version": "0.9.9",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app"
@@ -12,4 +12,8 @@
     "mongoose": "3.5.4",
     "socket.io": "0.9.13"
   }
+  "engines" {  
+    "npm": "1.1.41",  
+    "node": "1.2.10"  
+  }  
 }
