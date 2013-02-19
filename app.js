@@ -61,3 +61,7 @@ backend.use(function(req, res, next) {
 
 backend.use(backboneio.middleware.mongooseStore(User));
 backboneio.listen(server, { mybackend: backend });
+backend.configure(function () { 
+  backend.set("transports", ["xhr-polling"]); 
+  backend.set("polling duration", 10); 
+});
