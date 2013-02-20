@@ -13,7 +13,7 @@ body {
   padding: 50px;
   font-size: 1.2rem;
   font-family: helvetica;
-  /*background: url(../images/wood_pattern.png) repeat;*/
+  background: url(../images/wood_pattern.png) repeat;
 }
 img {
 	vertical-align: bottom;
