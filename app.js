@@ -39,6 +39,7 @@ server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 
+
 //mongoose
 var Schema = mongoose.Schema;
 var UserSchema = new Schema({
@@ -60,8 +61,8 @@ backend.use(function(req, res, next) {
 });
 
 backend.use(backboneio.middleware.mongooseStore(User));
-backboneio.listen(server, { mybackend: backend });
-backend.configure(function () { 
-  backend.set("transports", ["xhr-polling"]); 
-  backend.set("polling duration", 10); 
-});
+var io = backboneio.listen(server, { mybackend: backend });
+    io.configure(function () { 
+      io.set("transports", ["xhr-polling"]); 
+      io.set("polling duration", 10); 
+    });
