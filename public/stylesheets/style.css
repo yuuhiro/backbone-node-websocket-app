@@ -133,6 +133,9 @@ right: 0;
 	top: 4px;
 	right: 4px;
 }
+.message_data .delete:hover {
+	box-shadow: 0 0 8px 0 hsla(219, 100%, 41%, 1);
+}
 .message_data .message {
 	margin-top: 6px;
 }

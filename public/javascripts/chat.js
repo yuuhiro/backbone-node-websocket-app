@@ -2,10 +2,12 @@ $(function() {
 
 	Backbone.io.connect();
 
+	//　モデルの設定
 	var Model = Backbone.Model.extend({
 		idAttribute: '_id'
 	});
 
+	// コレクションの設定
 	var Models = Backbone.Collection.extend({
 		model: Model,
 		backend: 'mybackend',
@@ -14,6 +16,7 @@ $(function() {
 		}
 	});
 
+	// モデルのビュー
 	var View = Backbone.View.extend({
 		tagName: 'li',
 		className: 'message_data',
@@ -103,6 +106,7 @@ $(function() {
 		}
 	});
 
+	// アプリのビュー
 	var AppView = Backbone.View.extend({
 		el: $('body'),
 		events: {
@@ -163,6 +167,6 @@ $(function() {
 
 	var models = new Models();
 	models.fetch();
-	new AppView({ collection: models});
+	new AppView({collection: models});
 
 });
