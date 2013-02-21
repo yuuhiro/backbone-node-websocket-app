@@ -64,4 +64,8 @@ backend.use(function(req, res, next) {
 // ミドルウェアを設定（mangodb）
 backend.use(backboneio.middleware.mongooseStore(User));
 
-backboneio.listen(server, { mybackend: backend });
+var io = backboneio.listen(server, { mybackend: backend });
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
