@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title><%= title %></title>
   	<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="javascripts/vendor/underscore-min.js"></script>
@@ -12,11 +13,13 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1 class="wood_brand"><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <textarea id="formMessage" class="form_message"></textarea>
-    <button id="sendMessasge" class="send_message"><span class="icon">&#9998;</span></button>
-    <button id="deleteAll" class="delete_all"><span class="icon">&#59177;</span></button>
+    <div class="create_box">
+      <textarea id="formMessage" class="form_message"></textarea>
+      <button id="sendMessasge" class="send_message not_valid"><span class="icon wood_brand">&#10133;</span></button>
+      <button id="deleteAll" class="delete_all not_valid"><span class="icon">&#59177;</span></button>
+    </div>
     <ul id="messageList" class="message_list"></ul>
   </body>
 </html>

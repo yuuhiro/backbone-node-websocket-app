@@ -27,6 +27,8 @@ h1 {
 	font-size: 4rem;
 	margin: 0;
 	padding: 0;
+}
+.wood_brand {
 	color: hsla(43, 46%, 44%, 1);
 	text-shadow:
 		-1px -1px 0 hsla(0, 0%, 0%, 1),
@@ -37,40 +39,89 @@ h1 {
 .icon {
 	font-family: 'icon-font';
 }
+.not_valid {
+	opacity: .6 !important;
+}
+.create_box {
+	position: relative;
+	width: 254px;
+	min-height: 290px;
+	margin-bottom: 10px;
+}
 .form_message {
 	width: 250px;
 	min-height: 250px;
 	background: hsla(43, 46%, 60%, .4);
 	border: none;
-	border-radius: 1px;
+	border-radius: 4px;
 	box-shadow: 
 		inset 1px 1px 0 0 hsla(0, 0%, 0%, .3),
 		1px 1px 0 0 hsla(0, 100%, 100%, .4);
+	position: absolute;
+	top: 34px;
 }
 .form_message:focus {
 	box-shadow:
 		0 0 6px 2px hsla(0, 100%, 10%, .8);
 	outline: none;
 }
-.send_message {
-	border: 2px solid hsla(0, 0%, 0%, 0.4);
+.send_message,
+.delete_all {
+	font-size: 4rem;
 	width: 30px;
 	height: 30px;
-	border-radius: 2px;
-	margin: 0;
-	background: none;
-}
-.send_message .icon {
-	font-size: 4rem;
 	line-height: 20px;
-	color: hsla(0, 0%, 60%, 1);
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 3px;
+	background: hsla(43, 46%, 44%, 0);
+	box-shadow:
+		inset 0 0 0 1px hsla(0, 0%, 0%, .2),
+		inset 0 2px 4px 0 hsla(0, 0%, 0%, .3),
+		inset 0 -13px 13px 0 hsla(0, 0%, 0%, .2),
+		0 1px 0 0px hsla(0, 100%, 100%, .7);
+	position: absolute;
+	cursor: pointer;
+}
+.send_message:hover,
+.delete_all:hover {
+	box-shadow:
+		inset 0 0 0 1px hsla(0, 0%, 0%, .2),
+		inset 0 13px 13px 0 hsla(0, 0%, 0%, .2),
+		0 1px 0 0px hsla(0, 100%, 100%, .7);
+}
+.send_message.not_valid:hover,
+.delete_all.not_valid:hover {
+	box-shadow:
+		inset 0 0 0 1px hsla(0, 0%, 0%, .2),
+		inset 0 2px 4px 0 hsla(0, 0%, 0%, .3),
+		inset 0 -13px 13px 0 hsla(0, 0%, 0%, .2),
+		0 1px 0 0px hsla(0, 100%, 100%, .7);	
+}
+
+.send_message {
+	top: 0;
+	right: 36px;
 }
 .delete_all {
-	background: none;
-	border: none;
+	top: 0;
+	right: 0;
+}
+.send_message .icon {
+	font-size: 5rem;
+	display: block;
+	position: absolute;
+	top: 7px;
+	left: 6px;
 }
 .delete_all .icon {
 	font-size: 4rem;
+	display: block;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	opacity: 0.5
 }
 
 .message_list {
@@ -117,24 +168,40 @@ right: 0;
 }
 .message_data .delete {
 	float: right;
-	width: 20px;
-	height: 20px;
+	width: 21px;
+	height: 21px;
 	margin: 0px;
 	padding: 0;
 	text-align: center;
-	background: #ccc;
 	border-radius: 20px;
 	border: none;
-	color: #fff;
-	text-shadow: 0 -1px 0 hsla(0, 0%, 0%, .5);
 	font-size: 3.3rem;
 	line-height: 20px;
 	position: absolute;
 	top: 4px;
 	right: 4px;
+	background: hsla(43, 46%, 44%, 0);
+	box-shadow:
+		inset 0 0 0 1px hsla(0, 0%, 0%, .2),
+		0 1px 0 0px hsla(0, 100%, 100%, .7);
+}
+.message_data .delete .icon {
+	color: hsla(0, 100%, 100%, .7);
+	text-shadow: 0 -1px 0 hsla(0, 0%, 0%, .5);
+	position: absolute;
+	top: 2px;
+	left: 5px;
 }
 .message_data .delete:hover {
-	box-shadow: 0 0 8px 0 hsla(219, 100%, 41%, 1);
+	background: hsla(219, 100%, 41%, .3);
+	box-shadow:
+		inset 0 1px 0 0 hsla(0, 0%, 0%, .2),
+		0 1px 0 0px hsla(0, 100%, 100%, .7);
+}
+.message_data .delete:hover .icon {
+	color: hsla(0, 100%, 100%, 1);
+	text-shadow: 0 1px 0 hsla(0, 0%, 0%, .5);
+	top: 1px;
 }
 .message_data .message {
 	margin-top: 6px;
