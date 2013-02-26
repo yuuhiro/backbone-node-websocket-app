@@ -27,6 +27,7 @@ $(function() {
 			'blur .edit_form': 'editDone'
 		},
 		initialize: function() {
+			_.bindAll(this, 'render', 'delete', 'editMode', 'editDone', 'updata', 'convertDate', 'mousedown', 'dragStart', 'dragend');
 			this.$el.bind('dragstart', _.bind(this.dragStart, this));
 			this.$el.bind('dragend', _.bind(this.dragend, this));
 			this.$el.bind('mousedown', _.bind(this.mousedown, this));
@@ -82,10 +83,15 @@ $(function() {
 			return newDate;
 		},
 		mousedown: function(e) {
-			var className = e.target.className;
+			var $target = $(e.target);
+			var $currentTarget = $(e.currentTarget);
+			var className = $target[0].className;
 			if((className !== 'message') && (className !== 'edit_form')){
 				this.$el.attr('draggable', 'true');
 				$(this.el).css('z-index', '100');
+				this.offsetX = e.currentTarget.offsetLeft;
+				this.offsetY = e.currentTarget.offsetTop;
+				console.log(this.offsetX + '/' + this.offsetY);
 			}
 		},
 		mouseup: function(e) {
@@ -96,12 +102,15 @@ $(function() {
 		},
 		dragend: function(e) {
 			if (e.originalEvent) e = e.originalEvent;
+			console.log(e);
 			var $target = $(e.currentTarget);
-			var targetHeight = $target.height();
-			var moveY = e.pageY - targetHeight;
-			var moveX = e.pageX;
-			$target.css({'position': 'absolute' , 'top': moveY, 'left': moveX});
-			this.model.save({top: moveY, left: moveX, isDrag: true}, {silent: true});
+			var moveX = e.layerX;
+			var moveY = e.layerY - e.target.offsetHeight;
+			var positionX = this.offsetX + moveX;
+			var positionY = this.offsetY + moveY;
+			console.log(moveX + '/' + moveY + '-' + positionX + '/' + positionY);
+			$target.css({'position': 'absolute' , 'top': positionY, 'left': positionX});
+			this.model.save({top: positionY, left: positionX, isDrag: true}, {silent: true});
 			this.$el.attr('draggable', 'false');
 		}
 	});
