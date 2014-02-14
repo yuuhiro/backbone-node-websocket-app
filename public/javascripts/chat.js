@@ -117,43 +117,46 @@ $(function() {
 
 	// アプリのビュー
 	var AppView = Backbone.View.extend({
-		el: $('body'),
+		el: '.wrapper',
 		events: {
-		  'click #sendMessasge': 'saveMessage',
-		  'click #deleteAll': 'deleteAll',
-		  'focus #formMessage': 'createMode',
-		  'blur #formMessage': 'createDone'
+			'click #sendMessasge': 'saveMessage',
+			'click #deleteAll': 'deleteAll',
+			'focus #formMessage': 'createMode',
+			'blur #formMessage': 'createDone'
 		},
 		initialize:function () {
 			this.limiter = 10;
-		   _.bindAll(this, 'render');
-		   this.collection.on('add change remove reset', this.render);
-		   this.$el.bind('dragover', _.bind(this.dragover, this));
-		   this.$el.bind('drop', _.bind(this.drop, this));
+			_.bindAll(this, 'render');
+			this.collection = new Models();
+			this.collection.on('add change remove reset', this.render);
+			this.$el.bind('dragover', _.bind(this.dragover, this));
+			this.$el.bind('drop', _.bind(this.drop, this));
+			this.collection.fetch();
 		},
 		render: function() {
-			$('#sendMessasge').addClass('not_valid');
-			$('#messageList').empty();
+			var that = this;
+			this.$el.find('#sendMessasge').addClass('not_valid');
+			this.$el.find('#messageList').empty();
 			var isEmpty = this.collection.length;
 			if(isEmpty === 0){
-				$('#deleteAll').addClass('not_valid');
+				this.$el.find('#deleteAll').addClass('not_valid');
 			}else{
-				$('#deleteAll').removeClass('not_valid');
+				this.$el.find('#deleteAll').removeClass('not_valid');
 			}
 			this.collection.each(function(message) {
 				var view = new View({ model: message });
-				$('#messageList').prepend(view.render().el);
+				that.$el.find('#messageList').prepend(view.render().el);
 			});
 			this.limit();
 		},
 		createMode: function() {
-			$('#sendMessasge').removeClass('not_valid');
+			this.$el.find('#sendMessasge').removeClass('not_valid');
 		},
 		createDone: function() {
-			$('#sendMessasge').addClass('not_valid');
+			this.$el.find('#sendMessasge').addClass('not_valid');
 		},
 		saveMessage: function() {
-			var $form = $('#formMessage');
+			var $form = this.$el.find('#formMessage');
 			var message = $form.val();
 			if(!message){
 				return false;
@@ -189,8 +192,6 @@ $(function() {
 		}
 	});
 
-	var models = new Models();
-	models.fetch();
-	new AppView({collection: models});
+	new AppView();
 
 });
