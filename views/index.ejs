@@ -15,11 +15,22 @@
   <body>
     <h1 class="wood_brand"><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <div class="create_box">
-      <textarea id="formMessage" class="form_message"></textarea>
-      <button id="sendMessasge" class="send_message not_valid"><span class="icon wood_brand">&#10133;</span></button>
-      <button id="deleteAll" class="delete_all not_valid"><span class="icon">&#59177;</span></button>
+    <div class="memo_wrap">
+      <div class="create_box">
+        <textarea class="form_message js_form_message"></textarea>
+        <button class="send_message js_send_message not_valid"><span class="icon wood_brand">&#10133;</span></button>
+        <button class="delete_all js_delete_all not_valid"><span class="icon">&#59177;</span></button>
+      </div>
+      <ul class="message_list js_message_list"></ul>
     </div>
-    <ul id="messageList" class="message_list"></ul>
+    <div class="memo_wrap2">
+      <div class="create_box">
+        <textarea class="form_message js_form_message"></textarea>
+        <button class="send_message js_send_message not_valid"><span class="icon wood_brand">&#10133;</span></button>
+        <button class="delete_all js_delete_all not_valid"><span class="icon">&#59177;</span></button>
+      </div>
+      <ul class="message_list js_message_list"></ul>
+    </div>
+      
   </body>
 </html>
