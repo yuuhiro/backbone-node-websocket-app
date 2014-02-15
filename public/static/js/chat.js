@@ -20,7 +20,7 @@ $(function() {
 	var View = Backbone.View.extend({
 		tagName: 'li',
 		className: 'message_data',
-		template : new EJS({url: 'javascripts/templates/view.ejs'}),
+		tmpl: YUU.Templates.memoItem,
 		events: {
 			'click .delete': 'delete',
 			'dblclick .message': 'editMode',
@@ -44,7 +44,7 @@ $(function() {
 			if(data.isDrag){
 				this.$el.css({'position': 'absolute', 'top': data.top + 'px', 'left': data.left + 'px'});
 			}
-			this.$el.html((this.template).render(data));
+			this.$el.html(this.tmpl(data));
 			return this;
 		},
 		delete: function() {

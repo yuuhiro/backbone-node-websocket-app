@@ -1329,3 +1329,234 @@ table {
 .h100p {
   height: 100%;
 }
+
+@font-face {
+  font-family: 'icon-font';
+  src: url(../fonts/entypo.woff);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 50px;
+  font-size: 1.2rem;
+  font-family: helvetica;
+  background: url(../images/wood_pattern.png) repeat;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.wood_brand {
+  color: #a4873d;
+  text-shadow: -1px -1px 0 black, -1px -1px 0 black, 1px 1px 0 rgba(255, 255, 255, 0.8);
+  opacity: 0.4;
+}
+
+.icon {
+  font-family: 'icon-font';
+}
+
+.not_valid {
+  opacity: .6 !important;
+}
+
+.create_box {
+  position: relative;
+  width: 254px;
+  min-height: 290px;
+  margin-bottom: 10px;
+}
+
+.form_message {
+  width: 250px;
+  min-height: 250px;
+  background: rgba(200, 173, 106, 0.4);
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.3), 1px 1px 0 0 rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 34px;
+}
+
+.form_message:focus {
+  box-shadow: 0 0 6px 2px rgba(51, 0, 0, 0.8);
+  outline: none;
+}
+
+.send_message,
+.delete_all {
+  font-size: 4rem;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  background: rgba(164, 135, 61, 0);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 4px 0 rgba(0, 0, 0, 0.3), inset 0 -13px 13px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0px rgba(255, 255, 255, 0.7);
+  position: absolute;
+  cursor: pointer;
+}
+
+.send_message:hover,
+.delete_all:hover {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 13px 13px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0px rgba(255, 255, 255, 0.7);
+}
+
+.send_message.not_valid:hover,
+.delete_all.not_valid:hover {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 4px 0 rgba(0, 0, 0, 0.3), inset 0 -13px 13px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0px rgba(255, 255, 255, 0.7);
+}
+
+.send_message {
+  top: 0;
+  right: 36px;
+}
+
+.delete_all {
+  top: 0;
+  right: 0;
+}
+
+.send_message .icon {
+  font-size: 5rem;
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 6px;
+}
+
+.delete_all .icon {
+  font-size: 4rem;
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  opacity: 0.5;
+}
+
+.message_list {
+  margin: 20px;
+}
+
+.message_data {
+  position: relative;
+  display: inline-block;
+}
+
+.message_data .message_wrap {
+  background: url(../images/cream_dust.png) repeat;
+  position: relative;
+  width: 230px;
+  min-height: 240px;
+  border-radius: 1px;
+  margin: 5px 0;
+  padding: 0 	10px 10px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.message_data::before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 9px;
+  -webkit-transform: rotate(-3deg) translate(4px, 1px) skew(-6deg, 0deg);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  z-index: -1;
+}
+
+.message_data::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 9px;
+  -webkit-transform: rotate(3deg) translate(-4px, 1px) skew(6deg, 0deg);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  z-index: -1;
+  right: 0;
+}
+
+.message_data .delete {
+  float: right;
+  width: 21px;
+  height: 21px;
+  margin: 0px;
+  padding: 0;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  font-size: 3.3rem;
+  line-height: 20px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(164, 135, 61, 0);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 0px rgba(255, 255, 255, 0.7);
+}
+
+.message_data .delete .icon {
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+
+.message_data .delete:hover {
+  background: rgba(0, 73, 209, 0.3);
+  box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.2), 0 1px 0 0px rgba(255, 255, 255, 0.7);
+}
+
+.message_data .delete:hover .icon {
+  color: white;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  top: 1px;
+}
+
+.message_data .message {
+  margin-top: 6px;
+}
+
+time {
+  font-size: 1rem;
+  display: block;
+  padding-top: 20px;
+}
+
+time .time {
+  margin-left: 5px;
+}
+
+.edit_form {
+  display: none;
+  width: 224px;
+  font-size: 1.2rem;
+}

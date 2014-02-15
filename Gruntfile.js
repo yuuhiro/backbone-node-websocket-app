@@ -15,9 +15,11 @@ module.exports = function(grunt) {
 				// watchするファイルを指定する
 				"public/static/sass/*.scss",
 				"public/static/sass/*/*.scss",
+				"public/static/hbs/*.hbs",
+				"public/static/hbs/*/*.hbs",
 				],
 				// 実行するタスク
-				tasks: ["compass"]
+				tasks: ["compass", "handlebars"]
 			},
 		},
 		// compassの設定("grunt-contrib-compass")
@@ -44,12 +46,35 @@ module.exports = function(grunt) {
 				src: ['public/static/css/base.css'],
 				dest: 'public/static/css/all.css'
 			},
+		},
+		handlebars: {
+			app: {
+				options: {
+					namespace: 'YUU.Templates',
+					processContent: function(hbs) {
+						hbs = hbs.replace(/^[\x20\t]+/mg, '').replace(/[\x20\t]+$/mg, '');
+						hbs = hbs.replace(/^[\r\n]+/, '').replace(/[\r\n]+$/, '');
+						return hbs;
+					},
+					processName: function(fname) {
+						return fname.replace('public/static/hbs/', '').replace('.hbs', '');
+					},
+					processPartialName: function(fname) {
+						return fname.replace('public/static/hbs/partials/', '').replace('.hbs', '');
+					},
+					partialsUseNamespace: true
+				},
+				files: {
+					'public/static/js/template.js': ['public/static/hbs/*.hbs', 'public/static/hbs/*/*.hbs']
+				}
+			}
 		}
 	});
 
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks("grunt-contrib-compass");
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-handlebars');
 
 	grunt.registerTask("default", ["watch:app"]);
 };
