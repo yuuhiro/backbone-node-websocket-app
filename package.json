@@ -12,8 +12,14 @@
     "mongoose": "3.5.4",
     "socket.io": "0.9.13"
   },
-  "engines": {  
-    "npm": "1.1.41",  
-    "node": "0.8.19"  
-  }  
+  "engines": {
+    "npm": "1.1.41",
+    "node": "0.8.19"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-compass": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-concat": "~0.3.0"
+  }
 }

@@ -1,0 +1,1331 @@
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.helvetica {
+  font-family: "Helvetica","Arial",sans-serif !important;
+}
+
+.helveticaBold {
+  font-family: "Helvetica","Arial",sans-serif !important;
+  font-weight: bold !important;
+}
+
+.hiragino_w6 {
+  font-weight: bold !important;
+}
+
+.fontweight_normal {
+  font-weight: normal !important;
+}
+
+.ff_a {
+  font-family: "Helvetica","Arial",sans-serif !important;
+}
+
+.fw_n {
+  font-weight: normal !important;
+}
+
+.fw_b {
+  font-weight: bold !important;
+}
+
+.hiragino {
+  font-family: "ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック",sans-serif !important;
+}
+
+.fs_12 {
+  font-size: 1.2rem !important;
+}
+
+.fs_s {
+  font-size: 1rem !important;
+}
+
+.fs_m {
+  font-size: 1.2rem !important;
+}
+
+.fs_l {
+  font-size: 1.4rem !important;
+}
+
+.fs_xl {
+  font-size: 1.6rem !important;
+}
+
+.fz10 {
+  font-size: 1rem !important;
+}
+
+.fz11 {
+  font-size: 1.1rem !important;
+}
+
+.fz12 {
+  font-size: 1.2rem !important;
+}
+
+.fz13 {
+  font-size: 1.3rem !important;
+}
+
+.fz14 {
+  font-size: 1.4rem !important;
+}
+
+.fz15 {
+  font-size: 1.5rem !important;
+}
+
+.fz16 {
+  font-size: 1.6rem !important;
+}
+
+.fz17 {
+  font-size: 1.7rem !important;
+}
+
+.fz18 {
+  font-size: 1.8rem !important;
+}
+
+.fca {
+  color: #8d7b58 !important;
+}
+
+.fcb {
+  color: #494634 !important;
+}
+
+.fcc {
+  color: #8f8567 !important;
+}
+
+.fcd {
+  color: #fff !important;
+}
+
+.fce {
+  color: #b3b2ad !important;
+}
+
+.fcf {
+  color: #f972b2 !important;
+}
+
+.fcg {
+  color: #817d68 !important;
+}
+
+.fch {
+  color: #6f6656 !important;
+}
+
+.fci {
+  color: #a0937b !important;
+}
+
+.fcj {
+  color: #aaa !important;
+}
+
+.fck {
+  color: #615d48 !important;
+}
+
+.fc_org {
+  color: #ffae25 !important;
+}
+
+.fc_red {
+  color: #fb6969 !important;
+}
+
+.td_u {
+  text-decoration: underline !important;
+}
+
+.color_black {
+  color: #000 !important;
+}
+
+.color_orange {
+  color: #ffab00 !important;
+}
+
+.color_gray {
+  color: #a7a7a7 !important;
+}
+
+.color_deep_gray {
+  color: #555 !important;
+}
+
+.red_color {
+  color: red !important;
+}
+
+.c_a {
+  color: #666 !important;
+}
+
+.c_b {
+  color: #ffab00 !important;
+}
+
+.c_link {
+  color: #589b94 !important;
+}
+
+.ta_l {
+  text-align: left !important;
+}
+
+.ta_c {
+  text-align: center !important;
+}
+
+.ta_r {
+  text-align: right !important;
+}
+
+.va_0 {
+  vertical-align: 0 !important;
+}
+
+.va_1 {
+  vertical-align: -1px !important;
+}
+
+.va_2 {
+  vertical-align: -2px !important;
+}
+
+.va_3 {
+  vertical-align: -3px !important;
+}
+
+.va_4 {
+  vertical-align: -4px !important;
+}
+
+.va_5 {
+  vertical-align: -5px !important;
+}
+
+.va_t {
+  vertical-align: top !important;
+}
+
+.va_m {
+  vertical-align: middle !important;
+}
+
+.va_b {
+  vertical-align: bottom !important;
+}
+
+.float_l {
+  float: left;
+}
+
+.float_r {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*----------------------------------
+  余白調整
+------------------------------------*/
+.mga_s {
+  margin: 4px !important;
+}
+
+.mga_m {
+  margin: 8px !important;
+}
+
+.mga_l {
+  margin: 16px !important;
+}
+
+.mga_xl {
+  margin: 24px !important;
+}
+
+.mgt_s {
+  margin-top: 4px !important;
+}
+
+.mgt_m {
+  margin-top: 8px !important;
+}
+
+.mgt_l {
+  margin-top: 16px !important;
+}
+
+.mgt_xl {
+  margin-top: 24px !important;
+}
+
+.mgt_0 {
+  margin-top: 0 !important;
+}
+
+.mgb_s {
+  margin-bottom: 4px !important;
+}
+
+.mgb_m {
+  margin-bottom: 8px !important;
+}
+
+.mgb_l {
+  margin-bottom: 16px !important;
+}
+
+.mgb_xl {
+  margin-bottom: 24px !important;
+}
+
+.mgb_0 {
+  margin-bottom: 0 !important;
+}
+
+.mgl_s {
+  margin-left: 4px !important;
+}
+
+.mgl_m {
+  margin-left: 8px !important;
+}
+
+.mgl_l {
+  margin-left: 16px !important;
+}
+
+.mgl_xl {
+  margin-left: 24px !important;
+}
+
+.mgl_0 {
+  margin-left: 0 !important;
+}
+
+.mgr_s {
+  margin-right: 4px !important;
+}
+
+.mgr_m {
+  margin-right: 8px !important;
+}
+
+.mgr_l {
+  margin-right: 16px !important;
+}
+
+.mgr_xl {
+  margin-right: 24px !important;
+}
+
+.mgr_0 {
+  margin-right: 0 !important;
+}
+
+.mg_center {
+  margin: 0 auto;
+}
+
+.pda_s {
+  padding: 4px !important;
+}
+
+.pda_m {
+  padding: 8px !important;
+}
+
+.pda_l {
+  padding: 16px !important;
+}
+
+.pda_xl {
+  padding: 24px !important;
+}
+
+.pdt_s {
+  padding-top: 4px !important;
+}
+
+.pdt_m {
+  padding-top: 8px !important;
+}
+
+.pdt_l {
+  padding-top: 16px !important;
+}
+
+.pdt_xl {
+  padding-top: 24px !important;
+}
+
+.pdt_0 {
+  padding-top: 0 !important;
+}
+
+.pdb_s {
+  padding-bottom: 4px !important;
+}
+
+.pdb_m {
+  padding-bottom: 8px !important;
+}
+
+.pdb_l {
+  padding-bottom: 16px !important;
+}
+
+.pdb_xl {
+  padding-bottom: 24px !important;
+}
+
+.pdb_0 {
+  padding-bottom: 0 !important;
+}
+
+.pdl_s {
+  padding-left: 4px !important;
+}
+
+.pdl_m {
+  padding-left: 8px !important;
+}
+
+.pdl_l {
+  padding-left: 16px !important;
+}
+
+.pdl_xl {
+  padding-left: 24px !important;
+}
+
+.pdl_0 {
+  padding-left: 0 !important;
+}
+
+.pdr_s {
+  padding-right: 4px !important;
+}
+
+.pdr_m {
+  padding-right: 8px !important;
+}
+
+.pdr_l {
+  padding-right: 16px !important;
+}
+
+.pdr_xl {
+  padding-right: 24px !important;
+}
+
+.pdr_0 {
+  padding-right: 0 !important;
+}
+
+/*----------------------------------
+  ボーダー
+------------------------------------*/
+.bdt_brw {
+  border-top: 1px solid #c8bfa6 !important;
+}
+
+.bdb_brw {
+  border-bottom: 1px solid #c8bfa6 !important;
+}
+
+.bdt_gray {
+  border-top: 1px solid #ccc !important;
+}
+
+.bdb_gray_dashed {
+  border-bottom: 1px dashed #ccc !important;
+}
+
+.bdt_a {
+  border-top: 1px solid #eee2ca !important;
+}
+
+.bdt_a_dash {
+  border-top: 1px dashed #eee2ca !important;
+}
+
+.bdb_a {
+  border-bottom: 1px solid #eee2ca !important;
+}
+
+.bdb_a_dash {
+  border-bottom: 1px dashed #eee2ca !important;
+}
+
+.bdt_b {
+  border-top: 1px solid #eadec6 !important;
+}
+
+.bdb_b {
+  border-bottom: 1px solid #eadec6 !important;
+}
+
+.bdt_c {
+  border-top: 1px solid #ddd !important;
+}
+
+.bdb_c {
+  border-bottom: 1px solid #ddd !important;
+}
+
+.bdb_d_dot {
+  border-bottom: 1px dotted #e7e2d6 !important;
+}
+
+.bdb_e {
+  border-bottom: 1px solid #f3ebd8 !important;
+}
+
+.bdb_f {
+  border-bottom: 1px solid #e3ded3 !important;
+}
+
+.bdb_f_dot {
+  border-bottom: 1px dotted #e3ded3 !important;
+}
+
+.bda {
+  border-color: #eee2ca !important;
+}
+
+.bdb {
+  border-color: #eadec6 !important;
+}
+
+.bdc {
+  border-color: #ddd !important;
+}
+
+.bdd {
+  border-color: #e7e2d6 !important;
+}
+
+.bde {
+  border-color: #f3ebd8 !important;
+}
+
+.bdf {
+  border-color: #e3ded3 !important;
+}
+
+.bd_t {
+  border-width: 1px 0 0;
+  border-style: solid;
+}
+
+.bd_b {
+  border-width: 0 0 1px;
+  border-style: solid;
+}
+
+.bd_l {
+  border-width: 0 0 0 1px;
+  border-style: solid;
+}
+
+.bd_r {
+  border-width: 0 1px 0 0;
+  border-style: solid;
+}
+
+.bd_dot {
+  border-style: dotted !important;
+}
+
+.bd_dash {
+  border-style: dashed !important;
+}
+
+.bdt_none {
+  border-top: none !important;
+}
+
+.bdb_none {
+  border-bottom: none !important;
+}
+
+.bdrz_s {
+  border-radius: 2px !important;
+}
+
+.bdrz_m {
+  border-radius: 4px !important;
+}
+
+.bdrz_l {
+  border-radius: 8px !important;
+}
+
+/*----------------------------------
+  背景色
+------------------------------------*/
+.bg_white {
+  background: #fff !important;
+}
+
+.bg_cream {
+  background: #fffcf5 !important;
+}
+
+.bg_orange {
+  background: #ffd98c !important;
+}
+
+.bg_light_orange {
+  background: #fef4df !important;
+}
+
+.bg_a {
+  background: #ffd88b !important;
+}
+
+.bg_b {
+  background: #fff !important;
+}
+
+.bg_c {
+  background: #51452c !important;
+}
+
+.bg_d {
+  background: #f7f5f1 !important;
+}
+
+.bg_e {
+  background: #fffcf5 !important;
+}
+
+.bg_f {
+  background: #fdf7ea !important;
+}
+
+.bg_g {
+  background: #ffefcd !important;
+}
+
+.bg_wt {
+  background: #fff !important;
+}
+
+/*-----------------------------------------------------------
+	角丸・シャドー
+-------------------------------------------------------------*/
+.bdr_shadow {
+  display: inline-block;
+  line-height: 0;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bdr_shadow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+}
+.bdr_shadow img {
+  border: none !important;
+}
+
+.thumb_bdr {
+  display: block;
+  line-height: 0;
+  position: relative;
+  border-radius: 4px;
+}
+.thumb_bdr img {
+  border: none !important;
+  border-radius: 4px;
+}
+.thumb_bdr.bdr_sdw::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+}
+.thumb_bdr.bdr_min {
+  border-radius: 2px;
+}
+.thumb_bdr.bdr_min::after {
+  border-radius: 2px;
+}
+.thumb_bdr.bdr_min img {
+  border-radius: 2px;
+}
+
+/*-----------------------------------------------------------
+	丸・シャドー共有スタイル
+-------------------------------------------------------------*/
+.circle_shadow {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.circle_shadow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100px;
+  -webkit-box-shadow: inset 0 1px 0 0 #e2ddd3;
+  -moz-box-shadow: inset 0 1px 0 0 #e2ddd3;
+  box-shadow: inset 0 1px 0 0 #e2ddd3;
+}
+
+.circle_shadow img {
+  background: #fff;
+  border: none !important;
+  border-radius: 100px !important;
+}
+
+/*-----------------------------------------------------------
+	丸・シャドー共有スタイル
+-------------------------------------------------------------*/
+.thumb_cr {
+  position: relative;
+  display: block;
+  line-height: 0;
+  border-radius: 100px;
+}
+.thumb_cr::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100px;
+  -webkit-box-shadow: inset 0 1px 0 0 #e2ddd3;
+  -moz-box-shadow: inset 0 1px 0 0 #e2ddd3;
+  box-shadow: inset 0 1px 0 0 #e2ddd3;
+}
+.thumb_cr img {
+  background: #fff;
+  border: none !important;
+  border-radius: 100px !important;
+}
+
+/*----------------------------------------
+  Flex Box
+----------------------------------------*/
+.box_flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+}
+.box_flex.align_center {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+}
+
+.flex_1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+}
+
+.flex_group_1 {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  box-ordinal-group: 1;
+}
+
+.flex_group_2 {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  box-ordinal-group: 2;
+}
+
+.flex_group_3 {
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  box-ordinal-group: 3;
+}
+
+/*----------------------------------------
+  Table
+----------------------------------------*/
+.d_tb {
+  display: table !important;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.d_tbc {
+  display: table-cell !important;
+}
+
+.d_b {
+  display: block;
+}
+
+.d_ib {
+  display: inline-block;
+}
+
+.ov_h {
+  overflow: hidden !important;
+}
+
+.bxz_bb {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.pos_r {
+  position: relative;
+}
+
+.pos_a {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.is_disable {
+  opacity: 0.6 !important;
+}
+
+.is_hide {
+  display: none !important;
+}
+
+/*----------------------------------------
+  size
+----------------------------------------*/
+.w5p {
+  width: 5%;
+}
+
+.w10p {
+  width: 10%;
+}
+
+.w15p {
+  width: 15%;
+}
+
+.w20p {
+  width: 20%;
+}
+
+.w25p {
+  width: 25%;
+}
+
+.w30p {
+  width: 30%;
+}
+
+.w40p {
+  width: 40%;
+}
+
+.w50p {
+  width: 50%;
+}
+
+.w60p {
+  width: 60%;
+}
+
+.w70p {
+  width: 70%;
+}
+
+.w75p {
+  width: 75%;
+}
+
+.w80p {
+  width: 80%;
+}
+
+.w90p {
+  width: 90%;
+}
+
+.w100p {
+  width: 100%;
+}
+
+.w13 {
+  width: 13px;
+}
+
+.w20 {
+  width: 20px;
+}
+
+.w24 {
+  width: 24px;
+}
+
+.w27 {
+  width: 27px;
+}
+
+.w32 {
+  width: 32px;
+}
+
+.w48 {
+  width: 48px;
+}
+
+.w50 {
+  width: 50px;
+}
+
+.w56 {
+  width: 56px;
+}
+
+.w69 {
+  width: 69px;
+}
+
+.w93 {
+  width: 93px;
+}
+
+.w100 {
+  width: 100px;
+}
+
+.h100p {
+  height: 100%;
+}

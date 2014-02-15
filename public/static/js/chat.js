@@ -24,11 +24,12 @@ $(function() {
 		events: {
 			'click .delete': 'delete',
 			'dblclick .message': 'editMode',
-			'blur .edit_form': 'editDone'
+			'blur .edit_form': 'editDone',
+			'dragstart': 'dragStart',
 		},
 		initialize: function() {
 			_.bindAll(this, 'render', 'delete', 'editMode', 'editDone', 'updata', 'convertDate', 'mousedown', 'dragStart', 'dragend');
-			this.$el.bind('dragstart', _.bind(this.dragStart, this));
+			// this.$el.bind('dragstart', _.bind(this.dragStart, this));
 			this.$el.bind('dragend', _.bind(this.dragend, this));
 			this.$el.bind('mousedown', _.bind(this.mousedown, this));
 			this.$el.bind('mouseup', _.bind(this.mouseup, this));
