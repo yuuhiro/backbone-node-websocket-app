@@ -4,7 +4,7 @@ this["YUU"]["Templates"] = this["YUU"]["Templates"] || {};
 this["YUU"]["Templates"]["memoItem"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, stack2, functionType="function", escapeExpression=this.escapeExpression;
+  var buffer = "", stack1, stack2, functionType="function";
 
 
   buffer += "<div class=\"message_wrap\">\n<button class=\"delete\">\n<span class=\"icon\">&#10060;</span>\n</button>\n<time datetime=\"";
@@ -29,11 +29,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "</span>\n</time>\n<p class=\"message\">";
   if (stack2 = helpers.message) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.message; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "</p>\n<textarea class=\"edit_form\">";
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "</p>\n<textarea class=\"edit_form\">";
   if (stack2 = helpers.form_message) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.form_message; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "</textarea>\n</div>";
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "</textarea>\n</div>";
   return buffer;
   });

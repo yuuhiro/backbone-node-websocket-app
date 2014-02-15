@@ -63,7 +63,7 @@ $(function() {
 			this.updata();
 		},
 		updata: function() {
-			var message = $(this.el).find('.edit_form').val();
+			var message = this.htmlEscape($(this.el).find('.edit_form').val());
 			var date = new Date();
 			this.model.save({message: message, date: date});
 		},
@@ -103,16 +103,22 @@ $(function() {
 		},
 		dragend: function(e) {
 			if (e.originalEvent) e = e.originalEvent;
-			console.log(e);
+			// console.log(e);
 			var $target = $(e.currentTarget);
 			var moveX = e.layerX;
 			var moveY = e.layerY - e.target.offsetHeight;
 			var positionX = this.offsetX + moveX;
 			var positionY = this.offsetY + moveY;
-			console.log(moveX + '/' + moveY + '-' + positionX + '/' + positionY);
+			// console.log(moveX + '/' + moveY + '-' + positionX + '/' + positionY);
 			$target.css({'position': 'absolute' , 'top': positionY, 'left': positionX});
 			this.model.save({top: positionY, left: positionX, isDrag: true}, {silent: true});
 			this.$el.attr('draggable', 'false');
+		},
+		htmlEscape: function(s){
+			s=s.replace(/&/g,'&amp;');
+			s=s.replace(/>/g,'&gt;');
+			s=s.replace(/</g,'&lt;');
+			return s;
 		}
 	});
 
@@ -158,7 +164,7 @@ $(function() {
 		},
 		saveMessage: function() {
 			var $form = this.$el.find('#formMessage');
-			var message = $form.val();
+			var message = this.htmlEscape($form.val());
 			if(!message){
 				return false;
 			}
@@ -190,6 +196,12 @@ $(function() {
 		drop: function(e) {
 			if (e.originalEvent) e = e.originalEvent;
 			e.preventDefault();
+		},
+		htmlEscape: function(s){
+			s=s.replace(/&/g,'&amp;');
+			s=s.replace(/>/g,'&gt;');
+			s=s.replace(/</g,'&lt;');
+			return s;
 		}
 	});
 
